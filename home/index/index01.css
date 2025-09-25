@@ -1,0 +1,110 @@
+body {
+    background-color: #eee;
+    background-size:cover;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    width: auto;
+}
+
+/*homeのロゴ下の直線*/
+.border{
+  width: 900px;       
+  border-bottom: 3px solid #333;
+  margin: 0 auto;
+}
+
+/* homeの本文*/
+#content {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  inset: 0;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 35px;
+}
+.logomark {
+  margin-bottom: 10px;
+  width: 700px;
+  height: auto;
+}
+.bottom{
+  margin-bottom: 10px;
+  width: 50px;
+  height: auto;
+}
+.top{
+  margin-bottom: 10px;
+  width: 50px;
+  height: auto;
+}
+
+/* プロフィール画面 */
+#profile {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  background: #fff;
+  padding: 20px;
+  overflow-y: auto; /* 中だけスクロール可能 */
+  opacity: 0;       /* 最初は透明 */
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  z-index: 1;
+}
+
+/* プロフィールを表示する状態 */
+.show-profile #home {
+  opacity: 0;           /* フェードアウト */
+  pointer-events: none; /* 操作できなくする */
+}
+
+.show-profile #profile {
+  opacity: 1;           /* フェードイン */
+  pointer-events: auto; /* 操作できるようにする */
+  z-index: 3;
+}
+
+/* 各画面を全画面サイズに */
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*pタグに関する設定*/
+.empty1{
+  margin: 4.0em 0; 
+}
+.empty2{
+  margin: 3.0em 0; 
+}
+.theme{
+  justify-content: center;
+  text-align: center;
+  width: 800px;
+  height: 58px;
+  margin: 0 auto;
+  background-color:#333;
+  color: #eee;
+  font-size: 35px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+p{
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+

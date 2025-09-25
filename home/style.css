@@ -1,0 +1,141 @@
+body {
+    background-color: #eee;
+    background-size:cover;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    width: auto;
+}
+
+/* スプラッシュ全体 */
+#splash {
+  position: fixed;
+  inset: 0;
+  background:url("photo/pngtree-hd-special-paper-texture-material-png-image_4363502.jpg");
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease; /* フェードアウト */
+  z-index: 1000;
+}
+
+#splash img {
+  width: 500px;
+  height: auto;
+  animation: fadeIn 1.5s ease; /* ロゴ自体もフェードイン */
+}
+
+#splash.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.border{
+  width: 900px;            /* 画像に合わせた長さ */
+  border-bottom: 3px solid #333;
+  margin: 0 auto;
+}
+/* ロゴを消したあと */
+.hide-splash #splash {
+  opacity: 0;
+  pointer-events: none;
+}
+/* ホームを表示 */
+.show-home #content {
+  opacity: 1;
+}
+
+/* 本文（最初は透明） */
+#content {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  display: flex;
+  opacity: 0;
+  transition: opacity 1s ease; /* フェードイン */
+  padding: 20px;
+  z-index: 2;
+  inset: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 35px;
+  transition: opacity 1s ease;
+}
+
+#profile {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  background: #fff;
+  padding: 20px;
+  overflow-y: auto; /* 中だけスクロール可能 */
+  opacity: 0;       /* 最初は透明 */
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  z-index: 1;
+}
+/* プロフィールを表示する状態 */
+.show-profile #content {
+  opacity: 0;           /* フェードアウト */
+  pointer-events: none; /* 操作できなくする */
+}
+.show-profile #profile {
+  opacity: 1;           /* フェードイン */
+  pointer-events: auto; /* 操作できるようにする */
+  z-index: 3;
+}
+.logomark {
+  margin-bottom: 10px;
+  width: 700px;
+  height: auto;
+}
+.bottom{
+  margin-bottom: 10px;
+  width: 50px;
+  height: auto;
+}
+.top{
+  margin-bottom: 10px;
+  width: 50px;
+  height: auto;
+}
+/* 各画面を全画面サイズに */
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*pタグに関する設定*/
+.empty1{
+  margin: 4.0em 0; 
+}
+.empty2{
+  margin: 3.0em 0; 
+}
+.theme{
+  justify-content: center;
+  text-align: center;
+  width: 800px;
+  height: 58px;
+  margin: 0 auto;
+  background-color:#333;
+  color: #eee;
+  font-size: 35px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+p{
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
