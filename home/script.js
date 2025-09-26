@@ -14,23 +14,33 @@ window.addEventListener("DOMContentLoaded", () => {
 const body = document.body;
 let startY = 0;
 
-// スマホ用スワイプ
+/*モバイル版の設定*/
 window.addEventListener("touchstart", (e) => {
-  startY = e.touches[0].clientY;
-});
+  if (e.touches.length === 1) { // 1本指のみ
+    startY = e.touches[0].clientY;
+  }
+}, { passive: true });
 
 window.addEventListener("touchend", (e) => {
-  let endY = e.changedTouches[0].clientY;
-  if (endY - startY > 50) {
-    body.classList.add("show-profile");   // 下スワイプ → プロフィール表示
-  }
-  if (startY - endY > 50) {
-    // プロフィールが最上部なら戻れる
-    if (document.getElementById("profile").scrollTop === 0) {
-      body.classList.remove("show-profile");
+  if (e.changedTouches.length === 1) {
+    const endY = e.changedTouches[0].clientY;
+    const diffY = endY - startY;
+
+    // 上スワイプ → プロフィール表示
+    if (diffY < -50) {
+      body.classList.add("show-profile");
+    }
+
+    // 下スワイプ → プロフィール閉じる
+    if (diffY > 50) {
+      const profile = document.getElementById("profile");
+      if (profile.scrollTop === 0) {
+        body.classList.remove("show-profile");
+      }
     }
   }
-});
+}, { passive: true });
+
 
 // PC用スクロール
 window.addEventListener("wheel", (e) => {
