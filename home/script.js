@@ -52,3 +52,25 @@ window.addEventListener("wheel", (e) => {
     }
   }
 });
+
+// 複数リンクをまとめて取得
+const links = document.querySelectorAll(".works");
+
+// 全リンクにイベントを付与
+links.forEach(link => {
+  function enlarge() {
+    link.style.transform = "scale(1.2)";
+  }
+  function resetSize() {
+    link.style.transform = "scale(1)";
+  }
+
+  // PC用
+  link.addEventListener("mouseenter", enlarge);
+  link.addEventListener("mouseleave", resetSize);
+
+  // モバイル用
+  link.addEventListener("touchstart", enlarge);
+  link.addEventListener("touchend", resetSize);
+  link.addEventListener("touchcancel", resetSize);
+});
