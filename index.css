@@ -1,0 +1,17 @@
+#splash{
+    background-color: gray;
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+a{
+  display: inline-block;
+  width: 280px;
+  height: 40px;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
