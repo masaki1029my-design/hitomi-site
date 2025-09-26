@@ -1,11 +1,28 @@
 const link = document.querySelector(".rock");
 
-// マウスが乗った時
-link.addEventListener("mouseenter", () => {
-  link.style.transform = "scale(1.2)"; // 1.2倍に拡大
-});
+function enlarge() {
+  link.style.transform = "scale(1.2)";
+}
 
-// マウスが外れた時
-link.addEventListener("mouseleave", () => {
-  link.style.transform = "scale(1)"; // 元の大きさに戻す
+function resetSize() {
+  link.style.transform = "scale(1)";
+}
+
+// PC用
+link.addEventListener("mouseenter", enlarge);
+link.addEventListener("mouseleave", resetSize);
+
+// モバイル用
+link.addEventListener("touchstart", enlarge);
+link.addEventListener("touchend", resetSize);
+link.addEventListener("touchcancel", resetSize);
+
+link.addEventListener("touchend", (e) => {
+  e.preventDefault(); // デフォルトのリンク遷移を一旦止める
+  resetSize();
+
+  // 0.15秒後にリンク先に遷移
+  setTimeout(() => {
+    window.location.href = link.href;
+  }, 150);
 });

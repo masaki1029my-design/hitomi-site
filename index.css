@@ -16,6 +16,7 @@ body{
 
 .logo{
   margin-bottom: 100px;
+  background-color: none;
 }
 
 a:link {
