@@ -35,6 +35,13 @@ body{
   font-weight: bold;
 }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 900px; /* モバイル用の幅 */
+    font-size: 14px; /* 文字サイズも少し小さめに */
+  }
+}
+
 .m{
   padding-top: 5px;
   margin-top: 1px;
