@@ -131,51 +131,12 @@ a:link {
   font-family: Apple Chancery;
 }
 
-/* 新着のマークアニメーションに関する */
-@keyframes English01 {
-  0%, 100% {
-    text-shadow: 
-      0 0 5px #ff0,
-      0 0 10px #ff0,
-      0 0 20px #ff0;
-  }
-  50% {
-    text-shadow: 
-      0 0 10px white,
-      0 0 20px #ff0,
-      0 0 40px #ff0;
-  }
-}
-
 .English01{
   margin-bottom: 2px;
   margin-top: 50px;
   font-size: 18px;
   color: #ff0;
   animation: English01 1.5s ease-in-out infinite;
-}
-
-@keyframes English02 {
-  0%, 100% {
-    text-shadow: 
-      0 0 5px white,
-      0 0 10px #ff0,
-      0 0 20px #ff0;
-  }
-  50% {
-    text-shadow: 
-      0 0 10px white,
-      0 0 20px #ff0,
-      0 0 40px #ff0;
-  }
-}
-
-
-
-.eeen{
-  font-size: 28px;
-  color: #ff0;
-  animation: en 1.5s ease-in-out infinite;
 }
 
 .works{

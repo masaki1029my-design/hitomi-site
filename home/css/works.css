@@ -12,15 +12,16 @@ body {
 }
 
 .home {
+    width: 900px;
     color: white;
     text-align:center;
     margin-top:0px;
-    margin-left:0px;
+    margin: auto;
     font-family: serif;
 }
 
 .theme{
-    max-width: 900px;      /* 最大幅を指定 */
+    max-width: 900px;     
     width: 100%;            /* 画面に合わせて縮む */
     margin: 0 auto;         /* 中央揃え */
     padding: 0 20px;  
@@ -28,32 +29,44 @@ body {
     vertical-align: middle;
     padding-right: 0;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
     color: black;
-    border-bottom: 2px solid #333;    /* 下線の代わりにボーダー */
-    padding-bottom: 4px;              /* テキストと線の間隔を調整 */
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;          
     color: #333;
+    vertical-align: middle;
+    font-family: Apple Chancery;
+}
+
+.month{
+    width: 200px;
+    border-bottom: 2px solid #333;
+    font-size: 20px;
+    color: #333;
+    max-width: 900px;               /* 画面に合わせて縮む */ 
 }
 
 .main1{
-    max-width: 900px;      /* 最大幅を指定 */
+    max-width: 900px;     
     width: 100%;            /* 画面に合わせて縮む */
     margin: 0 auto;         /* 中央揃え */
     padding: 0px 20px;
     margin-top: 40px;
-    background-color: white;
+    background-color: #333;
     vertical-align: middle;
     padding-right: 0;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
-    padding-bottom: 4px;              /* テキストと線の間隔を調整 */
-    color: #333;
+    padding-bottom: 4px;              
+    color: #eee;
 }
 
+/*ーーーー10月欄に関する設定ーーーー*/
 .main1_0{
-    max-width: 900px;      /* 最大幅を指定 */
+    display: flex;
+    max-width: 900px;
     width: 100%;            /* 画面に合わせて縮む */
     margin: 0 auto;
     padding: 0px 20px;
@@ -63,28 +76,48 @@ body {
     font-weight: bold;
     text-align: left;
     font-size: 15px;
-    padding-bottom: 4px;              /* テキストと線の間隔を調整 */
+    padding-bottom: 4px;            
     color: #333;
+}
+/*ーーー10月第一作のリンクに関する設定ーーー*/
+.works.th101{
+    width: 250px;
+    margin: 20px;
+    height: 350px;
+    background-color: dimgray;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform 0.5s ease; /* JSでtransform変更時に滑らかに */
+}
+.works.th101:hover{
+    background-color: brown;
+    color: #eee;
+}
+.th101.th101:visited{
+    color: #eee;
+}
+.picture{
+    width: 240px;
 }
 
 .main2{
-    max-width: 900px;      /* 最大幅を指定 */
+    max-width: 900px;     
     width: 100%;            /* 画面に合わせて縮む */
     margin: 0 auto;         /* 中央揃え */
     padding: 0px 20px;
     margin-top: 40px;
-    background-color: white;
+    background-color: #333;
     vertical-align: middle;
     padding-right: 0;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
-    padding-bottom: 4px;              /* テキストと線の間隔を調整 */
-    color: #333;
+    padding-bottom: 4px;             
+    color:#eee;
 }
 
 .main2_0{
-    max-width: 900px;      /* 最大幅を指定 */
+    max-width: 900px;    
     width: 100%;            /* 画面に合わせて縮む */
     margin: 0 auto;
     padding: 0px 20px;
@@ -94,62 +127,13 @@ body {
     font-weight: bold;
     text-align: left;
     font-size: 15px;
-    padding-bottom: 4px;              /* テキストと線の間隔を調整 */
+    padding-bottom: 4px;            
     color: #333;
-}
-
-.EN{
-    vertical-align: middle;
-    font-size: 40px;
-    font-family: Apple Chancery;
 }
 
 .rogo{
     background-color: white;
     width: 300px;
-}
-
-.main5_5{
-    text-align: justify;
-}
-
-.main5{
-    padding-bottom: 100px;
-    font-size: 20px;
-    line-height: 37px;
-    color: black;
-    padding-top: 10px;
-    background-size: 100% 100%;
-    background-image: url("../photo/texture962350_TP_V4.webp");
-    background-position: center;
-    height: 170px;           /* 画面いっぱい */
-    width: 900px;         /* 文章の幅を決める */
-    text-align: justify;  /* 両端揃え */
-    margin: 0 auto;
-    padding-left: 50;
-    padding-right: 50;
-    text-align: center;
-}
-
-.main4_4{
-    text-align: justify;
-}
-
-.main4{
-    padding-bottom: 100px;
-    font-size: 20px;
-    line-height: 37px;
-    color: black;
-    padding-top: 10px;
-    background-image: url("../photo/texture962350_TP_V4.webp");
-    background-position: center;
-    height: 120px;           /* 画面いっぱい */
-    width: 900px;         /* 文章の幅を決める */
-    text-align: justify;  /* 両端揃え */
-    margin: 0 auto;
-    padding-left: 50;
-    padding-right: 50;
-    text-align: center;
 }
 
 .midashi{
@@ -158,53 +142,6 @@ body {
 
 .midashi1{
     text-align: center;
-}
-
-.main3{
-    padding-bottom: 100px;
-    font-size: 20px;
-    line-height: 37px;
-    color: black;
-    padding-top: 10px;
-    background-size: 100% 100%;
-    background-image: url("../photo/texture962350_TP_V4.webp");
-    background-position: center;
-    height: 80px;           /* 画面いっぱい */
-    width: 900px;         /* 文章の幅を決める */
-    text-align: justify;  /* 両端揃え */
-    margin: 0 auto;
-    padding-left: 50;
-    padding-right: 50;
-    text-align: center;
-}
-
-
-@keyframes maru {
-  0%, 100% {
-    text-shadow: 
-      0 0 5px white,
-      0 0 10px white,
-      0 0 20px red;
-  }
-  50% {
-    text-shadow: 
-      0 0 10px white,
-      0 0 20px red,
-      0 0 40px red;
-  }
-}
-
-.maru {
-  color: brown;
-  animation: maru 1.5s ease-in-out infinite;
-}
-
-.mae{
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 60px;
-    margin-bottom: 10px;
-    margin-top: 10px;
 }
 
 .empty{
