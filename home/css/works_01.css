@@ -40,7 +40,7 @@ body {
 }
 
 .month{
-    width: 200px;
+    width: 150px;
     border-bottom: 2px solid #333;
     font-size: 20px;
     color: #333;
@@ -71,31 +71,26 @@ body {
     margin: 0 auto;
     padding: 0px 20px;
     margin-top: 10px;
-    vertical-align: middle;
     padding-right: 0;
     font-weight: bold;
     text-align: left;
     font-size: 15px;
-    padding-bottom: 4px;            
-    color: #333;
-}
-/*ーーー10月第一作のリンクに関する設定ーーー*/
-.works.th101{
-    width: 250px;
-    margin: 20px;
-    height: 350px;
-    background-color: dimgray;
+    padding-bottom: 4px;
+    padding-top: 4px;            
     color: #eee;
+    background-color:dimgray;
+}
+.subtitle{
     text-align: center;
-    padding-top: 10px;
-    transition: transform 0.5s ease; /* JSでtransform変更時に滑らかに */
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
 }
-.works.th101:hover{
-    background-color: brown;
-    color: #eee;
-}
-.th101.th101:visited{
-    color: #eee;
+.main1_1{
+    padding: 30px;
+    text-align: justify;
+    line-height: 33px;
 }
 .picture{
     width: 240px;
@@ -136,15 +131,23 @@ body {
     background-color: white;
     width: 300px;
 }
-
-.midashi{
-    font-weight: bold;
+.works.back{
+    width: 200px;
+    padding-top: 13px;
+    background-color: #333;
 }
-
-.midashi1{
-    text-align: center;
+.works.back:visited{
+    background-color: #333;
+    color: #eee;
+}
+.works.back:hover{
+    background-color: brown;
+    color: #eee;
 }
 
 .empty{
     margin: 5.0em 0; 
+}
+.empty_1{
+    margin: 10.0em 0; 
 }
