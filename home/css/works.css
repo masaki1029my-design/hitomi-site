@@ -100,6 +100,9 @@ body {
 .picture{
     width: 240px;
 }
+.works_title{
+    font-size: 20px;
+}
 
 .main2{
     max-width: 900px;     
