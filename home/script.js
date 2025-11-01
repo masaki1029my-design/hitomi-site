@@ -59,7 +59,7 @@ const links = document.querySelectorAll(".works");
 // 全リンクにイベントを付与
 links.forEach(link => {
   function enlarge() {
-    link.style.transform = "scale(1.2)";
+    link.style.transform = "scale(1.1)";
   }
   function resetSize() {
     link.style.transform = "scale(1)";
